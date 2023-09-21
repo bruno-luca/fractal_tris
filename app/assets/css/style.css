@@ -1,0 +1,48 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-color: rgb(4, 14, 30);
+}
+
+.main{
+    background-color: rgb(38, 50, 84);
+    height: 567pt;
+    width: 567pt;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.inner{
+    height: 186pt;
+    width: 186pt;
+    background-color: rgba(38, 50, 84, 0.2);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.cell{
+    height: 60pt;
+    width: 60pt;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(38, 39, 66);
+
+}
+
+.cell:hover{
+    background-color: rgba(38, 50, 84, 0.2);
+}
+
