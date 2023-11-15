@@ -3,6 +3,8 @@ window.addEventListener("load", async function () {
 });
 
 async function init() {
+    
+
     await initMap();
 
     await initPlayers();
@@ -35,9 +37,6 @@ function initMap() {
                 cell.id = "" + i + j;
                 inner.append(cell);
 
-                cell.addEventListener("click", function () {
-                    mark(cell.id);
-                });
             }
             map.append(inner);
         }
