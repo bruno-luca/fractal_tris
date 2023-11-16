@@ -1,0 +1,22 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--yellow);
+    margin: 20px;
+    padding: 10px;
+
+}
+
+.left-items a,
+.right-items a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+
+}
+
+.left-items a:hover,
+.right-items a:hover {
+    background-color: #555;
+}

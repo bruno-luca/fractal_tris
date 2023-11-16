@@ -1,0 +1,67 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(4, 14, 30);
+    font-family:  monospace;
+
+
+}
+
+header {
+    background-color: rgb(38, 50, 84);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+
+footer {
+    background-color: rgb(38, 50, 84);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+#container {
+    display: flex;
+    flex-direction:  column ;
+    justify-content:  center ;
+    height: 100vh;
+
+  }
+
+#Scritta{
+    display: flex;
+    justify-content:  center ;
+    color: var(--yellow);
+    font-size: xx-large;
+}
+
+#Pulsanti
+{
+    display: flex;
+    justify-content:  center  ;
+    margin: 10px;
+    padding: 10px;
+  
+}
+
+button{
+    margin: 10px;
+    padding: 10px;
+    width: 100px;
+    height: 50px;
+    background-color: var(--green);
+    font-family:  monospace;
+}
+
+
+
