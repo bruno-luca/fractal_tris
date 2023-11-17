@@ -1,0 +1,47 @@
+-- Inserimento di utenti
+INSERT INTO "User" (nickname, password, score, permission) VALUES
+    ('user1', 'password1', 100, 0),
+    ('user2', 'password2', 120, 0),
+    ('user3', 'password3', 90, 0),
+    ('user4', 'password4', 110, 0),
+    ('adminuser', 'adminpassword', 150, 1);
+
+-- Inserimento di statistiche degli utenti
+INSERT INTO UserStats (nickname, totalGames, wins, loses, draws) VALUES
+    ('user1', 20, 10, 5, 5),
+    ('user2', 18, 8, 7, 3),
+    ('user3', 22, 12, 8, 2),
+    ('user4', 15, 7, 6, 2),
+    ('adminuser', 50, 45, 3, 2);
+
+-- Inserimento di lobby
+INSERT INTO Lobby (creator, opponent, winner, dataStart, dataEnd) VALUES
+    ('user1', 'user2', NULL, '2023-01-01', '2023-01-02'),
+    ('user3', 'user4', NULL, '2023-02-01', '2023-02-03'),
+    ('user2', 'user1', NULL, '2023-03-01', '2023-03-05'),
+    ('user4', 'user3', NULL, '2023-04-01', '2023-04-10'),
+    ('adminuser', 'user1', NULL, '2023-05-01', '2023-05-15');
+
+-- Inserimento di mosse
+INSERT INTO Moves (nickname, lobbyId, cell, area) VALUES
+    ('user1', 1, 3, 0),
+    ('user2', 1, 5, 1),
+    ('user3', 2, 2, 2),
+    ('user4', 2, 7, 3),
+    ('adminuser', 5, 1, 4);
+
+-- Inserimento di messaggi
+INSERT INTO Message (sender, gameid, content, date) VALUES
+    ('user1', 1, 'Buona partita!', '2023-01-01'),
+    ('user2', 1, 'Grazie, è stata divertente!', '2023-01-01'),
+    ('user3', 2, 'In bocca al lupo!', '2023-02-01'),
+    ('user4', 2, 'Grazie, ci vediamo dopo!', '2023-02-01'),
+    ('adminuser', 5, 'Annuncio importante!', '2023-05-01');
+
+-- Inserimento di annunci
+INSERT INTO Announcements (admin, content, date) VALUES
+    ('adminuser', 'Importante: Nuova funzionalità disponibile!', '2023-05-01');
+
+
+
+

@@ -1,0 +1,55 @@
+-- Tabella User
+CREATE TABLE "User" (
+    nickname VARCHAR(255) PRIMARY KEY,
+    password VARCHAR(255) NOT NULL,
+    score INT,
+    permission INT
+);
+
+-- Tabella UserStats con cancellazione a cascata
+CREATE TABLE UserStats (
+    nickname VARCHAR(255) PRIMARY KEY,
+    totalGames INT,
+    wins INT,
+    loses INT,
+    draws INT,
+    FOREIGN KEY (nickname) REFERENCES "User"(nickname) ON DELETE CASCADE
+);
+
+-- Tabella Lobby
+CREATE TABLE Lobby (
+    id SERIAL PRIMARY KEY,
+    creator VARCHAR(255) REFERENCES "User"(nickname),
+    opponent VARCHAR(255) REFERENCES "User"(nickname),
+    winner VARCHAR(255) REFERENCES "User"(nickname),
+    dataStart TIMESTAMP,
+    dataEnd TIMESTAMP
+);
+
+-- Tabella Moves con cancellazione a cascata
+CREATE TABLE Moves (
+    id SERIAL PRIMARY KEY,
+    nickname VARCHAR(255) REFERENCES "User"(nickname) ON DELETE CASCADE,
+    lobbyId INT REFERENCES Lobby(id) ON DELETE CASCADE,
+    cell INT,
+    area INT
+);
+
+-- Tabella Message con cancellazione a cascata
+CREATE TABLE Message (
+    id SERIAL PRIMARY KEY,
+    sender VARCHAR(255) REFERENCES "User"(nickname) ON DELETE CASCADE,
+    gameid INT REFERENCES Lobby(id) ON DELETE CASCADE,
+    content TEXT,
+    date TIMESTAMP
+);
+
+-- Tabella Announcements con cancellazione a cascata
+CREATE TABLE Announcements (
+    id SERIAL PRIMARY KEY,
+    admin VARCHAR(255) REFERENCES "User"(nickname) ON DELETE CASCADE,
+    content TEXT,
+    date TIMESTAMP
+);
+
+
