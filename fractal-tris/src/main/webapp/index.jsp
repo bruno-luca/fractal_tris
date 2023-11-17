@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tis hello world</title>
+    <title>FTTT</title>
 </head>
 <body>
 <h1><%= "Ciao giocatore" %>

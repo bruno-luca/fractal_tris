@@ -18,7 +18,7 @@ input, textarea {
     box-sizing: border-box;
 }
 
-#Login{
+#login{
     color: var(--yellow);
     display: flex;
     justify-content: center;
